@@ -218,3 +218,46 @@ ops.interval: <%= @config['ops.interval'] %>
 <% else -%>
 #ops.interval: 5000
 <% end -%>
+
+# Set to false to disable X-Pack graph features
+<% if @config.key?('xpack.graph.enabled') %>
+xpack.graph.enabled: <%= @config['xpack.graph.enabled'] %>
+<% else -%>
+#xpack.graph.enabled: false
+<% end -%>
+
+# Set to false to disable X-Pack machine learning features
+Set to false to disable X-Pack machine learning features
+<% if @config.key?('xpack.ml.enabled') %>
+xpack.ml.enabled: <%= @config['xpack.ml.enabled'] %>
+<% else -%>
+#xpack.ml.enabled: false
+<% end -%>
+
+# Set to false to disable X-Pack monitoring features
+<% if @config.key?('xpack.monitoring.enabled') %>
+xpack.monitoring.enabled: <%= @config['xpack.monitoring.enabled'] %>
+<% else -%>
+#xpack.monitoring.enabled: false
+<% end -%>
+
+# Set to false to disable X-Pack reporting features
+<% if @config.key?('xpack.reporting.enabled') %>
+xpack.reporting.enabled: <%= @config['xpack.reporting.enabled'] %>
+<% else -%>
+#xpack.reporting.enabled: false
+<% end -%>
+
+# Set to false to disable X-Pack security features
+<% if @config.key?('xpack.security.enabled') %>
+xpack.reporting.enabled: <%= @config['xpack.security.enabled'] %>
+<% else -%>
+#xpack.security.enabled: false
+<% end -%>
+
+# Set to false to disable Watcher
+<% if @config.key?('xpack.watcher.enabled') %>
+xpack.reporting.enabled: <%= @config['xpack.watcher.enabled'] %>
+<% else -%>
+#xpack.watcher.enabled: false
+<% end -%>
