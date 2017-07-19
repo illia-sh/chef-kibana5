@@ -249,14 +249,14 @@ xpack.reporting.enabled: <%= @config['xpack.reporting.enabled'] %>
 
 # Set to false to disable X-Pack security features
 <% if @config.key?('xpack.security.enabled') %>
-xpack.reporting.enabled: <%= @config['xpack.security.enabled'] %>
+xpack.security.enabled: <%= @config['xpack.security.enabled'] %>
 <% else -%>
 #xpack.security.enabled: false
 <% end -%>
 
 # Set to false to disable Watcher
 <% if @config.key?('xpack.watcher.enabled') %>
-xpack.reporting.enabled: <%= @config['xpack.watcher.enabled'] %>
+xpack.watcher.enabled: <%= @config['xpack.watcher.enabled'] %>
 <% else -%>
 #xpack.watcher.enabled: false
 <% end -%>
