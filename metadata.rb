@@ -1,10 +1,10 @@
 name             'kibana5'
-maintainer       'Azat Khadiev'
-maintainer_email 'anuriq@gmail.com'
+maintainer       ''
+maintainer_email ''
 license          'Apache-2.0'
 description      'Installs/Configures kibana 5'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.1.6'
+version          '1.1.7'
 issues_url       'https://github.com/anuriq/chef-kibana5/issues' if respond_to?(:issues_url)
 source_url       'https://github.com/anuriq/chef-kibana5' if respond_to?(:source_url)
 

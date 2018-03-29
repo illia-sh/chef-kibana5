@@ -239,6 +239,24 @@ xpack.ml.enabled: <%= @config['xpack.ml.enabled'] %>
 #xpack.ml.enabled: false
 <% end -%>
 
+<% if @config.key?('xpack.security.encryptionKey') %>
+xpack.security.encryptionKey: <%= @config['xpack.security.encryptionKey'] %>
+<% else -%>
+# xpack.security.encryptionKey "default"
+<% end -%>
+
+<% if @config.key?('xpack.security.cookieName') %>
+xpack.security.cookieName: <%= @config['xpack.security.cookieName'] %>
+<% else -%>
+xpack.security.cookieName: "sid"
+<% end -%>
+
+<% if @config.key?('xpack.security.secureCookies') %>
+xpack.security.secureCookies: <%= @config['xpack.security.secureCookies'] %>
+<% else -%>
+# xpack.security.secureCookies: false
+<% end -%>
+
 # Set to false to disable X-Pack monitoring features
 <% if @config.key?('xpack.monitoring.enabled') %>
 xpack.monitoring.enabled: <%= @config['xpack.monitoring.enabled'] %>
