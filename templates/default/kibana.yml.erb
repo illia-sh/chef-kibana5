@@ -245,6 +245,12 @@ xpack.security.encryptionKey: <%= @config['xpack.security.encryptionKey'] %>
 # xpack.security.encryptionKey "default"
 <% end -%>
 
+<% if @config.key?('xpack.reporting.encryptionKey') %>
+xpack.security.encryptionKey: <%= @config['xpack.reporting.encryptionKey'] %>
+<% else -%>
+# xpack.reporting.encryptionKey "anystingvalue"
+<% end -%>
+
 <% if @config.key?('xpack.security.cookieName') %>
 xpack.security.cookieName: <%= @config['xpack.security.cookieName'] %>
 <% else -%>
