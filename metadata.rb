@@ -2,9 +2,9 @@ name             'kibana5'
 maintainer       ''
 maintainer_email ''
 license          'Apache-2.0'
-description      'Installs/Configures kibana 5'
+description      'Installs/Configures kibana 6'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.1.8'
+version          '1.1.9'
 issues_url       'https://github.com/anuriq/chef-kibana5/issues' if respond_to?(:issues_url)
 source_url       'https://github.com/anuriq/chef-kibana5' if respond_to?(:source_url)
 
