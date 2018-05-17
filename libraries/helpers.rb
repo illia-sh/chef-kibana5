@@ -16,6 +16,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+def get_aws_secrets(env = node.chef_environment)
+  require 'aws-sdk'
+  secretsmanager = Aws::SecretsManager::Client.new(
+  region: "eu-west-1"
+  )
+  response = JSON[secretsmanager.get_secret_value({"secret_id": "elk_cluster"}).secret_string][env]
+end
+
 module Kibana
   module Helpers
     # Returns download URL for Kibana artifact
