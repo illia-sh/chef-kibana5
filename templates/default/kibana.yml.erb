@@ -246,7 +246,7 @@ xpack.security.encryptionKey: <%= @config['xpack.security.encryptionKey'] %>
 <% end -%>
 
 <% if @config.key?('xpack.reporting.encryptionKey') %>
-xpack.security.encryptionKey: <%= @config['xpack.reporting.encryptionKey'] %>
+xpack.reporting.encryptionKey: <%= @config['xpack.reporting.encryptionKey'] %>
 <% else -%>
 # xpack.reporting.encryptionKey "anystingvalue"
 <% end -%>
